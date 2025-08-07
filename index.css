@@ -9,31 +9,40 @@ body {
   font-family: Arial, sans-serif; /* fallback */
   color: white;
   line-height: 1.4;
+  padding-top: 60px;
 }
 
 /* Nav */
 nav {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   background-color: darkred;
-  padding: 1rem;
-  z-index: 10;
+  padding: 1rem 0;
+  z-index: 1000;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
-  font-family: "Spirax", sans-serif;
   color: white;
   text-decoration: none;
   font-weight: bold;
+  font-family: "Spirax", sans-serif;
   font-size: 1.2rem;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  text-decoration: underline;
 }
 
 /* Sektioner */
@@ -59,14 +68,23 @@ section header h1 {
 /* Bakgrundsbilder */
 #hot {
   background-image: url('assets/hot.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#juice {
-  background-image: url('assets/juice.jpg');
+#juicy {
+ background-image: url('assets/juicy.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #cozy {
-  background-image: url('assets/cozy.jpg');
+  background-image: url('assets/cosy.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Paragrafer */
@@ -75,4 +93,15 @@ p {
   max-width: 600px;
   margin: 0 auto;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+@media (min-width: 768px) {
+  nav a {
+    margin: 0 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  section {
+    font-size: 1.5rem;
+  }
 }
